@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <!-- css-here -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h3 class="text-center text-3xl text-gray-500 mt-12 ">MONEY <span class="text-5xl   text-indigo-600 font-bold">Details</span></h3>
+    </header>
+    <main>
+        <section class="money-detail">
+            <div class="grid-cols-3 grid w-3/4 mx-auto">
+                <div class="bg-blue-400 text-white text-center text-3xl font-bold m-8 p-8">
+                    <h3>Deposit</h3>
+                    <p class="text-5xl mt-2">$ <span id="deposit-total">00</span></p>
+                </div>
+                <div class="bg-green-400 text-white text-center text-3xl font-bold m-8 p-8">
+                    <h3>Withdraw</h3>
+                    <p class="text-5xl mt-2">$00</p>
+                </div>
+                <div class="bg-pink-400 text-white text-center text-3xl font-bold m-8 p-8">
+                    <h3>Balance</h3>
+                    <p class="text-5xl mt-2">$<span id="main-balance">1200</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="Dipo-Withdraw">
+            <div class="grid grid-cols-2 w-3/4 mx-auto ">
+                <div class="bg-indigo-500 m-8 p-8">
+                    <h3 class="text-3xl font-bold text-white">Deposit</h3>
+                    <input id="deposit-input" class="block rounded-2xl w-2/4 px-4 p-2 my-4" type="email" placeholder="$ Amount">
+                    <button id="deposit-btn"  class="text-white py-2 rounded-2xl text-2xl font-bold px-3 bg-indigo-900" type="submit">Deposit</button>
+                </div>
+                <div class="bg-yellow-500 m-8 p-8">
+                    <h3 class="text-3xl font-bold text-white">Withdaw</h3>
+                    <input id="withdraw-input" class="block rounded-2xl w-2/4 px-4 p-2 my-4" type="email" placeholder="$ Amount">
+                    <button id="withdraw-btn"  class="text-white py-2 rounded-2xl text-2xl font-bold px-3 bg-yellow-900" type="submit">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/banking.js"></script>
+</body>
+</html>
