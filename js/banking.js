@@ -22,4 +22,30 @@ document.getElementById('deposit-btn').addEventListener('click',function(){
     balanceField.innerText = newBalanceTotal;
 
     depositField.value = '';
+});
+
+
+//Withdraw money
+document.getElementById('withdraw-btn').addEventListener('click',function(){
+    //get withdraw input
+    let withdrawInput = document.getElementById('withdraw-input');
+    let withdrawInputText = withdrawInput.value;
+    let newWithdrawTotal = parseFloat(withdrawInputText);
+    //get withdraw total
+    let withdrawField = document.getElementById('withdraw-total');
+    let newWithdrawText = withdrawField.innerText;
+    let newWithdrawAmount = parseFloat(newWithdrawText);
+    //set total in withdraw field
+    let newWithTotalAmount = newWithdrawTotal + newWithdrawAmount;
+    withdrawField.innerText = newWithTotalAmount;
+    //get main balance
+    const balanceField = document.getElementById('main-balance');
+    let newBalanceText = balanceField.innerText;
+    let newBalanceAmount = parseFloat(newBalanceText);
+    //New balance total
+    let balanceTotal = newBalanceAmount - newWithdrawTotal;
+    balanceField.innerText = balanceTotal;
+    
+    withdrawInput.value = '';
+
 })
